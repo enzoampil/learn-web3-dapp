@@ -243,47 +243,47 @@ export const CHAINS_CONFIG: ChainsType = {
 			{
 				id: "connect",
 				title: "Connect to the Solana devnet cluster",
-				url: "https://learn2.figment.io/tutorials/connect-to-devnet"
+				url: "https://learn.figment.io/tutorials/connect-to-devnet"
 			},
 			{
 				id: "account",
 				title: "Create an Account/Keypair",
-				url: "https://learn2.figment.io/tutorials/create-solana-keypair"
+				url: "https://learn.figment.io/tutorials/create-solana-keypair"
 			},
 			{
 				id: "fund",
 				title: "Fund the account with SOL",
-				url: "https://learn2.figment.io/tutorials/fund-solana-account"
+				url: "https://learn.figment.io/tutorials/fund-solana-account"
 			},
 			{
 				id: "balance",
 				title: "Check your account's balance",
-				url: "https://learn2.figment.io/tutorials/check-solana-account-balance"
+				url: "https://learn.figment.io/tutorials/check-solana-account-balance"
 			},
 			{
 				id: "transfer",
 				title: "Transfer SOL tokens between accounts",
-				url: "https://learn2.figment.io/tutorials/transfer-sol-tokens"
+				url: "https://learn.figment.io/tutorials/transfer-sol-tokens"
 			},
 			{
 				id: "deploy",
 				title: "Deploy the Program",
-				url: "https://learn2.figment.io/tutorials/deploy-solana-program"
+				url: "https://learn.figment.io/tutorials/deploy-solana-program"
 			},
 			{
 				id: "greeter",
 				title: "Create a Storage for the Program",
-				url: "https://learn2.figment.io/tutorials/how-to-store-state"
+				url: "https://learn.figment.io/tutorials/how-to-store-state"
 			},
 			{
 				id: "getter",
 				title: "Get the greeting counter",
-				url: "https://learn2.figment.io/tutorials/get-greetings"
+				url: "https://learn.figment.io/tutorials/get-greetings"
 			},
 			{
 				id: "setter",
 				title: "Send a greeting to program",
-				url: "https://learn2.figment.io/tutorials/send-greetings"
+				url: "https://learn.figment.io/tutorials/send-greetings"
 			},
 		]
 	},

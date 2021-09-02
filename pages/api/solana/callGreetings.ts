@@ -23,6 +23,8 @@ export default async function setGreetings(
 ) {
   try {
     const { greeter, secret, programId } = req.body;
+    console.log(greeter, secret, programId);
+
     const url = getSafeUrl();
     const connection = new Connection(url, "confirmed");
 
