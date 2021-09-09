@@ -18,21 +18,31 @@ export default async function transfer(
     const connection = new Connection(url, "confirmed");
 
     const fromPubkey = new PublicKey(address as string);
+    // const toPubkey = new PublicKey("D1PBZ5XkKGXBf8JE8waRLbhzLVKn3voNGbWHLwP5yC3V")
     const toPubkey = new PublicKey(recipient as string);
     //... let's skip the beginning as it's should be familiar for you now.
     // The secret key is stored in our state as a stingified array
     const secretKey = Uint8Array.from(JSON.parse(secret as string));
 
     // Find the parameter to pass  
-    const instructions = SystemProgram.transfer
+    const instructions = SystemProgram.transfer({
+      fromPubkey,
+      toPubkey,
+      lamports,
+    })
 
     // How could you construct a signer array's
-    const signers = 
+    const signers = [
+      {
+        publicKey: fromPubkey,
+        secretKey
+      }
+    ]
 
     // Maybe adding someting to a Transaction could be interesting ?
-    const transaction = new Transaction()
+    const transaction = new Transaction().add(instructions)
 
-    const hash =// You should now what is expected here.
+    const hash = await sendAndConfirmTransaction(connection, transaction, signers);// You should now what is expected here.
     res.status(200).json(hash);
   } catch (error) {
     console.log(error);

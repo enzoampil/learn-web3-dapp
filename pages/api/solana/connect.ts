@@ -8,8 +8,8 @@ export default async function connect(
 ) {
   try {
     const url = getSafeUrl();
-    const connection = undefined;
-    const version = undefined;
+    const connection = new Connection(url, "confirmed");
+    const version = await connection.getVersion();
     res.status(200).json(version?.["solana-core"]);
   } catch (error) {
     console.log(error);
