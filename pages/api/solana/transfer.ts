@@ -18,7 +18,7 @@ export default async function transfer(
     const connection = new Connection(url, "confirmed");
 
     const fromPubkey = new PublicKey(address as string);
-    // const toPubkey = new PublicKey("D1PBZ5XkKGXBf8JE8waRLbhzLVKn3voNGbWHLwP5yC3V")
+    // const toPubkey = new PublicKey("")
     const toPubkey = new PublicKey(recipient as string);
     //... let's skip the beginning as it's should be familiar for you now.
     // The secret key is stored in our state as a stingified array
