@@ -35,13 +35,13 @@ export default async function getGreetings(
     }
 
     // Find the expected parameters.
-    const greeting = borsh.deserialize(undefined)
+    const greeting = borsh.deserialize(GreetingSchema, GreetingAccount, accountInfo.data)
 
     // A short helper
     console.log(greeting)
 
     // Pass down the counter
-    res.status(200).json(undefined);
+    res.status(200).json(greeting.counter);
   } catch(error) {
     console.error(error);
     res.status(500).json('Get Greeting failed');

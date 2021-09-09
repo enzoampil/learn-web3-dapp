@@ -40,9 +40,13 @@ export default async function setGreetings(
   
     // this your turn to figure out 
     // how to create this transaction 
-    const hash = await sendAndConfirmTransaction(undefined);
+    const hash = await sendAndConfirmTransaction(
+      connection,
+      new Transaction().add(instruction),
+      [payerKeypair]
+      );
   
-    res.status(200).json(undefined);
+    res.status(200).json(hash);
   } catch(error) {
     console.error(error);
     res.status(500).json('Get balance failed');
